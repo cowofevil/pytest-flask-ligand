@@ -2,6 +2,8 @@
 pytest-flask-ligand
 ===================
 
+|pre-commit-status|
+
 Pytest fixtures and helper functions to use for testing flask-ligand microservices.
 
 Developer Quick Start Guide
@@ -12,13 +14,13 @@ Follow the instructions below to get a development environment up and running qu
 Prerequisites
 =============
 
-- Python 3.10+ (3.11 recommended)
+- Python 3.10+
 - virtualenvwrapper_
 
 Getting Help with Make Tasks
 ============================
 
-Execute the following command to get a full list of ``make`` tasks::
+Execute the following command to get a full list of ``make`` targets::
 
     $ make help
 
@@ -27,13 +29,17 @@ Setup Python Development Environment
 
 1. Create a Python virtual environment::
 
-    $ mkvirtualenv -p py39 pytest-flask-ligand
+    $ mkvirtualenv -p py310 pytest-flask-ligand
 
 2. Setup develop environment::
 
     $ make develop-venv
 
-3. Verify that environment is ready for development::
+3. Setup git pre-commit hooks::
+
+    $ make setup-pre-commit
+
+4. Verify that environment is ready for development::
 
     $ make test-all
 
@@ -60,3 +66,7 @@ editors.
 .. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.io/en/latest/
 .. _Python Black: https://black.readthedocs.io/en/stable/
 .. _editor integration: https://black.readthedocs.io/en/stable/integrations/editors.html
+
+.. |pre-commit-status| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+   :target: https://github.com/pre-commit/pre-commit
+   :alt: pre-commit

@@ -1,23 +1,78 @@
-==========================
-Production Release Process
-==========================
+====================================
+Automated Production Release Process
+====================================
 
-The workflow below is targeted at creating a `GitHub release`_ using tags.
+This repo utilizes `python-semantic-release`_ in conjunction with `GitHub Actions`_ to create releases automatically.
 
-1. You will need to make sure that you are on the master branch, your working directory is clean and up to date.
+======================================
+Manually Creating a Production Release
+======================================
 
-2. Decide if you are going to increment the major, minor, or patch version. You can refer to semver_ to help you make
-   that decision.
+**ONLY UNDER LIMITED CIRCUMSTANCES SHOULD THIS PROCESS BE USED!**
 
-3. Use the `bump-major`, `bump-minor`, or `bump-patch`::
+Prerequisites
+-------------
 
-    $ make bump-minor
+- Python 3.10+
+- virtualenvwrapper_
 
-4. Once the task has successfully completed you need to push the tag and commit::
+Getting Help with Make Tasks
+============================
 
-    $ git push origin && git push origin refs/tags/<tagname>
+Execute the following command to get a full list of ``make`` targets::
 
-5. Create a release on GitHub. (`GitHub release`_)
+    $ make help
 
-.. _semver: https://semver.org
-.. _GitHub release: https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release
+Setup Python Development Environment
+====================================
+
+1. Create a Python virtual environment::
+
+    $ mkvirtualenv -p py310 pytest-flask-ligand
+
+2. Setup develop environment::
+
+    $ make develop-venv
+
+3. Setup git pre-commit hooks::
+
+    $ make setup-pre-commit
+
+4. Verify that environment is ready for development::
+
+    $ make test-all
+
+Configuring Environment Variables
+---------------------------------
+
+The following environment variables are necessary for creating a full production release:
+
+.. list-table:: **Environment Variables**
+   :widths: 30 50
+
+   * - **ENV**
+     - **Description**
+   * - ``GH_TOKEN``
+     - A personal access token from GitHub. This is used for authenticating when pushing tags, publishing releases etc.
+       See `Configuring push to Github`_ for usage.
+
+       To generate a token go to https://github.com/settings/tokens and click on *Personal access token*.
+   * - ``REPOSITORY_USERNAME``
+     - Used together with REPOSITORY_PASSWORD when publishing artifact.
+
+       Note: If you use token authentication with *pypi* set this to *__token__*.
+   * - ``REPOSITORY_PASSWORD``
+     - Used together with REPOSITORY_USERNAME when publishing artifact. Also used for token when using token
+       authentication.
+
+Publish the Release
+-------------------
+
+Simply execute the following ``make`` target::
+
+    $ make publish
+
+.. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.io/en/latest/
+.. _python-semantic-release: https://python-semantic-release.readthedocs.io/en/latest/#
+.. _GitHub Actions: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
+.. _Configuring push to Github: https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic-github

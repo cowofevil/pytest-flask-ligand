@@ -1,9 +1,13 @@
 black~=22.6
 bump2version~=1.0
+coverage~=6.4
 flake8~=5.0
 ipython~=8.4
 mypy~=0.971
 pytest-cov~=3.0
 pre-commit~=2.20
+Pygments~=2.12
 pytest-mock~=3.8
+python-semantic-release~=7.31
 tox~=3.25
+twine~=3.8
