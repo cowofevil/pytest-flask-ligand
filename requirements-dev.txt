@@ -1,0 +1,9 @@
+black~=22.6
+bump2version~=1.0
+flake8~=5.0
+ipython~=8.4
+mypy~=0.971
+pytest-cov~=3.0
+pre-commit~=2.20
+pytest-mock~=3.8
+tox~=3.25
