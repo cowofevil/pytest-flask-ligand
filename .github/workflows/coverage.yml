@@ -1,6 +1,9 @@
 name: Code Coverage Report
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
@@ -20,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          pip3 install -r requirements.txt -r requirements-dev.txt
+          make develop
       - name: Generate Coverage Report
         run: make coverage-xml
       - name: Upload Report to Codecov
