@@ -84,6 +84,7 @@ clean-pip-cache: ## purge the PIP cache to pull latest packages from PyPI
 clean-test: ## remove test and coverage artifacts
 	rm -fr .tox/
 	rm -f .coverage
+	rm -f coverage.xml
 	rm -fr htmlcov/
 	rm -fr .pytest_cache/
 
@@ -120,6 +121,10 @@ coverage-term: ## check code coverage with a simple terminal report
 coverage-html: coverage-term ## check code coverage with an HTML report
 	@coverage html
 	@$(BROWSER) htmlcov/index.html
+
+.PHONY: coverage-xml
+coverage-xml: coverage-term ## check code coverage with an XML report
+	@coverage xml
 
 .PHONY: install
 install: clean ## install the package to the active Python's site-packages

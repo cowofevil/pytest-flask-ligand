@@ -2,7 +2,7 @@
 pytest-flask-ligand
 ===================
 
-|pre-commit-status|
+|build-status| |pypi-status| |codecov-status| |pre-commit-status|
 
 Pytest fixtures and helper functions to use for testing flask-ligand microservices.
 
@@ -67,6 +67,17 @@ editors.
 .. _Python Black: https://black.readthedocs.io/en/stable/
 .. _editor integration: https://black.readthedocs.io/en/stable/integrations/editors.html
 
+.. |build-status| raw:: html
+
+        <a href="https://github.com/cowofevil/pytest-flask-ligand/actions/workflows/bump_and_publish_release.yml">
+        <img src="https://github.com/cowofevil/pytest-flask-ligand/actions/workflows/bump_and_publish_release.yml/badge.svg" alt="Build"/>
+        </a>
+.. |pypi-status| image:: https://img.shields.io/pypi/v/pytest-flask-ligand?color=blue&logo=pypi
+   :target: https://pypi.org/project/pytest-flask-ligand/
+   :alt: PyPI
+.. |codecov-status| image:: https://img.shields.io/codecov/c/gh/cowofevil/pytest-flask-ligand?color=teal&logo=codecov
+   :target: https://app.codecov.io/gh/cowofevil/pytest-flask-ligand
+   :alt: Codecov
 .. |pre-commit-status| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
    :target: https://github.com/pre-commit/pre-commit
    :alt: pre-commit
