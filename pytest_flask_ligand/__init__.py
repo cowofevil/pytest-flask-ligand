@@ -19,11 +19,12 @@ from dateutil.parser import parse
 # ======================================================================================================================
 # Globals
 # ======================================================================================================================
-DUMMY_ID: str = str(uuid.UUID("00000000-0000-0000-0000-000000000000"))
-DUMMY_ETAG: str = "0000000000000000000000000000000000000000"
-USER_ID: str = DUMMY_ID
-OPEN_API_CLIENT_NAME: str = "ligand-client"
-ISO_8601_REGEX: str = (
+DUMMY_ID = str(uuid.UUID("00000000-0000-0000-0000-000000000000"))
+DUMMY_ETAG = "0000000000000000000000000000000000000000"
+USER_ID = DUMMY_ID
+USER_DEFAULT_ROLES = ["admin", "user"]
+OPEN_API_CLIENT_NAME = "ligand-client"
+ISO_8601_REGEX = (
     r"^(?:[1-9]\d{3}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1\d|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|"
     r"(?:0[13578]|1[02])-31)|(?:[1-9]\d(?:0[48]|[2468][048]|[13579][26])|"
     r"(?:[2468][048]|[13579][26])00)-02-29)T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\dZ$"
@@ -110,6 +111,23 @@ def iso_8601_datetime_rgx() -> re.Pattern[str]:
     """A regular expression for the expected datetime format for all schemas."""
 
     return re.compile(ISO_8601_REGEX)
+
+
+@pytest.fixture(scope="function")
+def default_roles() -> list[str]:
+    """A list of default roles to use for gaining access to endpoints. (By default this grants admin access)."""
+
+    return USER_DEFAULT_ROLES
+
+
+@pytest.fixture(scope="function")
+def user_info(default_roles: list[str]) -> dict[str, Any]:
+    """A dictionary containing the user information used for authentication in the JWT."""
+
+    return {
+        "id": USER_ID,
+        "roles": default_roles,
+    }
 
 
 @pytest.fixture(scope="session")
