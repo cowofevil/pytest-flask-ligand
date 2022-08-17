@@ -3,6 +3,7 @@ coverage~=6.4
 flake8~=5.0
 ipython~=8.4
 mypy~=0.971
+pytest~=7.1
 pytest-cov~=3.0
 pre-commit~=2.20
 Pygments~=2.12
