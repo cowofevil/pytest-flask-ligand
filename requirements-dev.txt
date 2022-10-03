@@ -12,4 +12,4 @@ python-semantic-release~=7.32
 tox~=3.26
 twine~=3.8
 types-python-dateutil~=2.8
-types-setuptools~=65.3
+types-setuptools~=65.4
