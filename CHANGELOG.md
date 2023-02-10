@@ -3,6 +3,27 @@ Changelog
 
 <!--next-version-placeholder-->
 
+## v0.1.6 (2023-02-10)
+### Fix
+* [558:robot:] Fix Broken GitHub Actions Build Badge ([`9bdf745`](https://github.com/cowofevil/pytest-flask-ligand/commit/9bdf7454e52ca76507c5f150ad4f46cd03db4d23))
+
+### Other
+* Update ipython requirement from ~=8.6 to ~=8.8 ([`03809eb`](https://github.com/cowofevil/pytest-flask-ligand/commit/03809ebb8e2d8f599c003e3a7ddf571ac0574777))
+* Update black requirement from ~=22.10 to ~=22.12 ([`ec8c1ea`](https://github.com/cowofevil/pytest-flask-ligand/commit/ec8c1eaeff4b650802fa83f243e0144375fdc98c))
+* Update tox requirement from ~=3.27 to ~=4.1 ([`cba93bf`](https://github.com/cowofevil/pytest-flask-ligand/commit/cba93bf3940c28b85852a635c2464383879a23a7))
+* Update flake8 requirement from ~=5.0 to ~=6.0 ([`1bce43e`](https://github.com/cowofevil/pytest-flask-ligand/commit/1bce43e391b366a266d5a143bb57d619dabcc1b4))
+* Update types-setuptools requirement from ~=65.5 to ~=65.6 ([`5bd3d70`](https://github.com/cowofevil/pytest-flask-ligand/commit/5bd3d7065403c2f68743d8058bb0993a745466f4))
+* [pre-commit.ci] pre-commit autoupdate ([`5ad57f1`](https://github.com/cowofevil/pytest-flask-ligand/commit/5ad57f19d0e0047fb42db649052c82c3afb2bf15))
+* Update mypy requirement from ~=0.982 to ~=0.991 ([`a518768`](https://github.com/cowofevil/pytest-flask-ligand/commit/a518768330af186676ca1a6b7ff850859f38f0bb))
+* Update tox requirement from ~=3.26 to ~=3.27 ([`ab97cae`](https://github.com/cowofevil/pytest-flask-ligand/commit/ab97cae539b7f187f663ea2f36d5ef78d11d6967))
+* Update pytest requirement from ~=7.1 to ~=7.2 ([`857a2e9`](https://github.com/cowofevil/pytest-flask-ligand/commit/857a2e91a80021ebc8c46a8004945516262bcf8b))
+* Update ipython requirement from ~=8.5 to ~=8.6 ([`9c96c8a`](https://github.com/cowofevil/pytest-flask-ligand/commit/9c96c8a67692c66906565caafc119e94a9bfc6a8))
+* [pre-commit.ci] pre-commit autoupdate ([`87e19d7`](https://github.com/cowofevil/pytest-flask-ligand/commit/87e19d7fefeb13fb5367e1e2c51a3c0d06d5c991))
+* Update black requirement from ~=22.8 to ~=22.10 ([`d9ded5a`](https://github.com/cowofevil/pytest-flask-ligand/commit/d9ded5ae2225ea81013c41eab8b7059b53118f8d))
+* [pre-commit.ci] pre-commit autoupdate ([`f63ffaa`](https://github.com/cowofevil/pytest-flask-ligand/commit/f63ffaa6f80bc2db4d4dbda54f979d5c1b1f53a6))
+* Update types-setuptools requirement from ~=65.4 to ~=65.5 ([`958b1b7`](https://github.com/cowofevil/pytest-flask-ligand/commit/958b1b7d5175c301c344d4726618aba68b574500))
+* [545] Update to Python 3.11 Final ([`ab4fcb4`](https://github.com/cowofevil/pytest-flask-ligand/commit/ab4fcb45ee45f60dc6e051b4a45f12235945fe5c))
+
 ## v0.1.5 (2022-10-06)
 ### Fix
 * [CHORE:robot:] Update Changelog Setting ([`1fa2c1e`](https://github.com/cowofevil/pytest-flask-ligand/commit/1fa2c1e036f205818618d1a8e8b04f6c02e11dcd))
