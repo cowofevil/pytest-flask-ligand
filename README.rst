@@ -67,7 +67,7 @@ editors.
 .. _Python Black: https://black.readthedocs.io/en/stable/
 .. _editor integration: https://black.readthedocs.io/en/stable/integrations/editors.html
 
-.. |build-status| image:: https://img.shields.io/github/workflow/status/cowofevil/pytest-flask-ligand/Build?logo=github
+.. |build-status| image:: https://img.shields.io/github/actions/workflow/status/cowofevil/pytest-flask-ligand/bump_and_publish_release.yml?branch=main&logo=github
    :target: https://github.com/cowofevil/pytest-flask-ligand/actions/workflows/bump_and_publish_release.yml
    :alt: Build
 .. |pypi-status| image:: https://img.shields.io/pypi/v/pytest-flask-ligand?color=blue&logo=pypi
