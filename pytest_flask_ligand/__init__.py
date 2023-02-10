@@ -17,7 +17,7 @@ from dateutil.parser import parse
 # ======================================================================================================================
 # Type Checking
 # ======================================================================================================================
-if TYPE_CHECKING:
+if TYPE_CHECKING:  # pragma: no cover
     from typing import Any
 
 
@@ -65,7 +65,7 @@ class FlaskLigandTestHelpers(object):
             seconds: The amount of time to wait.
         """
 
-        time.sleep(seconds)
+        time.sleep(seconds)  # pragma: no cover
 
     @staticmethod
     def parse_iso_str(iso_8601_str: str) -> datetime:
@@ -75,7 +75,7 @@ class FlaskLigandTestHelpers(object):
             iso_8601_str: An ISO 8601 string to parse.
         """
 
-        return parse(iso_8601_str)
+        return parse(iso_8601_str)  # pragma: no cover
 
     @staticmethod
     def loads(s: str) -> Any:
@@ -85,7 +85,7 @@ class FlaskLigandTestHelpers(object):
             s: JSON string to deserialize.
         """
 
-        return flask.json.loads(s)
+        return flask.json.loads(s)  # pragma: no cover
 
 
 # ======================================================================================================================
@@ -102,28 +102,28 @@ def helpers() -> FlaskLigandTestHelpers:
 def dummy_id() -> str:
     """A dummy UUID to use for negative test cases."""
 
-    return DUMMY_ID
+    return DUMMY_ID  # pragma: no cover
 
 
 @pytest.fixture(scope="session")
 def dummy_etag() -> str:
     """A dummy ETag to use for negative test cases."""
 
-    return DUMMY_ETAG
+    return DUMMY_ETAG  # pragma: no cover
 
 
 @pytest.fixture(scope="session")
 def iso_8601_datetime_rgx() -> re.Pattern[str]:
     """A regular expression for the expected datetime format for all schemas."""
 
-    return re.compile(ISO_8601_REGEX)
+    return re.compile(ISO_8601_REGEX)  # pragma: no cover
 
 
 @pytest.fixture(scope="function")
 def default_roles() -> list[str]:
     """A list of default roles to use for gaining access to endpoints. (By default this grants admin access)."""
 
-    return USER_DEFAULT_ROLES
+    return USER_DEFAULT_ROLES  # pragma: no cover
 
 
 @pytest.fixture(scope="function")
@@ -133,11 +133,11 @@ def user_info(default_roles: list[str]) -> dict[str, Any]:
     return {
         "id": USER_ID,
         "roles": default_roles,
-    }
+    }  # pragma: no cover
 
 
 @pytest.fixture(scope="session")
 def open_api_client_name() -> str:
     """The client name to use for the OpenAPI generator endpoints."""
 
-    return OPEN_API_CLIENT_NAME
+    return OPEN_API_CLIENT_NAME  # pragma: no cover
