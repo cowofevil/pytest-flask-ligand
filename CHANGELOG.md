@@ -3,6 +3,10 @@ Changelog
 
 <!--next-version-placeholder-->
 
+## v0.1.7 (2023-02-10)
+### Fix
+* [FIX:robot:] Update Deps ([`b6c2045`](https://github.com/cowofevil/pytest-flask-ligand/commit/b6c204528ce95876430275d7f2528c2998f937b7))
+
 ## v0.1.6 (2023-02-10)
 ### Fix
 * [558:robot:] Fix Broken GitHub Actions Build Badge ([`9bdf745`](https://github.com/cowofevil/pytest-flask-ligand/commit/9bdf7454e52ca76507c5f150ad4f46cd03db4d23))
