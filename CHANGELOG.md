@@ -3,6 +3,10 @@ Changelog
 
 <!--next-version-placeholder-->
 
+## v0.1.11 (2023-04-25)
+### Fix
+* :arrow_up: Update mypy requirement from ~=1.1 to ~=1.2 ([`46a5aeb`](https://github.com/cowofevil/pytest-flask-ligand/commit/46a5aebbbac2531ef0f7d6367b4747a32122cb75))
+
 ## v0.1.10 (2023-04-25)
 ### Fix
 * :arrow_up: Update pre-commit requirement from ~=3.1 to ~=3.2 ([`87028b5`](https://github.com/cowofevil/pytest-flask-ligand/commit/87028b5c8d7197d8ac51ff962f5ef4c156fe1283))
