@@ -3,6 +3,10 @@ Changelog
 
 <!--next-version-placeholder-->
 
+## v0.1.10 (2023-04-25)
+### Fix
+* :arrow_up: Update pre-commit requirement from ~=3.1 to ~=3.2 ([`87028b5`](https://github.com/cowofevil/pytest-flask-ligand/commit/87028b5c8d7197d8ac51ff962f5ef4c156fe1283))
+
 ## v0.1.9 (2023-04-25)
 ### Fix
 * :arrow_up: Update types-setuptools requirement from ~=67.5 to ~=67.6 ([`dc7fe76`](https://github.com/cowofevil/pytest-flask-ligand/commit/dc7fe76654bf21e3f70ca76e7a7543f875135a55))
