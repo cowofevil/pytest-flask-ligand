@@ -3,6 +3,10 @@ Changelog
 
 <!--next-version-placeholder-->
 
+## v0.1.13 (2023-04-25)
+### Fix
+* :arrow_up: Update pytest requirement from ~=7.2 to ~=7.3 ([#75](https://github.com/cowofevil/pytest-flask-ligand/issues/75)) ([`d8a000f`](https://github.com/cowofevil/pytest-flask-ligand/commit/d8a000f686375721e7f48eaecfbc7e2d99af1ef5))
+
 ## v0.1.12 (2023-04-25)
 ### Fix
 * :arrow_up: Update ipython requirement from ~=8.11 to ~=8.12 ([`cff8e00`](https://github.com/cowofevil/pytest-flask-ligand/commit/cff8e001844e80385150ae8ef66b179c079093a9))
