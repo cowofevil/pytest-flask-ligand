@@ -3,6 +3,25 @@ Changelog
 
 <!--next-version-placeholder-->
 
+## v0.1.9 (2023-04-25)
+### Fix
+* :arrow_up: Update types-setuptools requirement from ~=67.5 to ~=67.6 ([`dc7fe76`](https://github.com/cowofevil/pytest-flask-ligand/commit/dc7fe76654bf21e3f70ca76e7a7543f875135a55))
+* :arrow_up: Update mypy requirement from ~=1.0 to ~=1.1 ([`ad7e49b`](https://github.com/cowofevil/pytest-flask-ligand/commit/ad7e49bc94d75244f70559e42328a5c85d1aaf7e))
+* :arrow_up: Update pre-commit requirement from ~=3.0 to ~=3.1 ([`9b3fc95`](https://github.com/cowofevil/pytest-flask-ligand/commit/9b3fc95a0015d54ef9bc77da7b98215b69be52ef))
+* :arrow_up: Update coverage[toml] requirement from ~=7.1 to ~=7.2 ([`d60cbc7`](https://github.com/cowofevil/pytest-flask-ligand/commit/d60cbc77f92e360f8df731c5af51a1006543c8a4))
+* :arrow_up: Update ipython requirement from ~=8.10 to ~=8.11 ([`d3a822c`](https://github.com/cowofevil/pytest-flask-ligand/commit/d3a822c4425411eec5ef23579c68d96b820b5fff))
+* :arrow_up: Update types-setuptools requirement from ~=67.3 to ~=67.5 ([`c7c1f28`](https://github.com/cowofevil/pytest-flask-ligand/commit/c7c1f28d40b2ac7c507c4ae21b0df69d44563b3b))
+* :arrow_up: Update types-setuptools requirement from ~=67.1 to ~=67.3 ([`4c2b838`](https://github.com/cowofevil/pytest-flask-ligand/commit/4c2b838f1cc5f8a254a9da1d3c98ae8416b3c58d))
+* :arrow_up: Update mypy requirement from ~=0.991 to ~=1.0 ([#58](https://github.com/cowofevil/pytest-flask-ligand/issues/58)) ([`e9fdaa2`](https://github.com/cowofevil/pytest-flask-ligand/commit/e9fdaa2e05e74327e224a3a8209643d95785d257))
+* :arrow_up: Update black requirement from ~=22.12 to ~=23.1 ([`cfaeb58`](https://github.com/cowofevil/pytest-flask-ligand/commit/cfaeb58bd937e4459a5ea03d2100dc3874574790))
+* :arrow_up: Update python-semantic-release requirement ([`94d9c84`](https://github.com/cowofevil/pytest-flask-ligand/commit/94d9c847332b2624a5feab72a0636b23fcdf499e))
+* :arrow_up: Update ipython requirement from ~=8.8 to ~=8.10 ([`8a5e413`](https://github.com/cowofevil/pytest-flask-ligand/commit/8a5e413aefa41eff25d580a0339277adae6ccbb1))
+
+### Other
+* [pre-commit.ci] pre-commit autoupdate ([`09833b9`](https://github.com/cowofevil/pytest-flask-ligand/commit/09833b96d8d2d0e762da4db01db3d68319f9298f))
+* [pre-commit.ci] pre-commit autoupdate ([`6557bf0`](https://github.com/cowofevil/pytest-flask-ligand/commit/6557bf044b339bd7ccd33b2b66382a51779f8dbf))
+* [pre-commit.ci] pre-commit autoupdate ([`93a56d7`](https://github.com/cowofevil/pytest-flask-ligand/commit/93a56d79c5eba8ee4b567e576c9482e403d0b6b1))
+
 ## v0.1.8 (2023-02-10)
 ### Fix
 * [560:robot:] Fix Packaging Issues ([`7452032`](https://github.com/cowofevil/pytest-flask-ligand/commit/74520324358a4dd63f5a264c4fd02c9c7472f4d7))
