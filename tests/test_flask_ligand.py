@@ -18,14 +18,12 @@ class TestFlaskLigandTestHelpers(object):
         """
 
         # create a temporary pytest test file
-        pytester.makepyfile(
-            """
+        pytester.makepyfile("""
             from pytest_flask_ligand import FlaskLigandTestHelpers
 
             def test_temp(helpers):
                 assert isinstance(helpers, FlaskLigandTestHelpers)
-            """
-        )
+            """)
 
         # run all tests with pytest
         result = pytester.runpytest("-ppytest_flask_ligand")
