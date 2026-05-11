@@ -27,7 +27,7 @@ jobs:
       - name: Generate Coverage Report
         run: make coverage-xml
       - name: Upload Report to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v6
         with:
           fail_ci_if_error: true
           files: ./coverage.xml
