@@ -8,19 +8,11 @@ given.
 The `Github forking workflow`_ is used for submitting proposals for change to this repo. The following sections will
 give a brief overview of how this repo utilizes the workflow for managing community contributions.
 
-------------
-Get Started!
-------------
-
-Ready to contribute? Here's how to set up ``pytest-flask-ligand`` for local development using the handy built-in
-Hatch scripts.
-
 Prerequisites
 -------------
 
 - Python 3.10+
 - `Hatch 1.6+`_
-- Hatch Development Environment (See README_ for instructions)
 
 Setup Fork & Local Feature Branch
 ---------------------------------
@@ -113,6 +105,6 @@ Before you submit a pull request, check that it meets these guidelines:
 .. _Hatch 1.6+: https://hatch.pypa.io/latest/
 .. _Github forking workflow: https://docs.github.com/en/get-started/quickstart/github-flow
 .. _fork this repo: https://docs.github.com/en/get-started/quickstart/fork-a-repo
-.. _python-semantic-release: https://python-semantic-release.readthedocs.io/en/latest/#
-.. _emoji commit parser: https://python-semantic-release.readthedocs.io/en/latest/configuration.html#commit-parser
+.. _python-semantic-release: https://python-semantic-release.readthedocs.io/en/latest/
+.. _emoji commit parser: https://python-semantic-release.readthedocs.io/en/latest/concepts/commit_parsing.html#emoji-commit-parser
 .. _semantic versioning: https://semver.org/

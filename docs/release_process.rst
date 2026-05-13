@@ -32,23 +32,27 @@ The following environment variables are necessary for creating a full production
        See `Configuring push to Github`_ for usage.
 
        To generate a token go to https://github.com/settings/tokens and click on *Personal access token*.
-   * - ``REPOSITORY_USERNAME``
+   * - ``HATCH_INDEX_USER``
      - Used together with REPOSITORY_PASSWORD when publishing artifact.
 
        Note: If you use token authentication with *pypi* set this to *__token__*.
-   * - ``REPOSITORY_PASSWORD``
+   * - ``HATCH_INDEX_AUTH``
      - Used together with REPOSITORY_USERNAME when publishing artifact. Also used for token when using token
        authentication.
 
 Publish the Release
 -------------------
 
-Simply execute the following Hatch script::
+1. Create a new release and build artifacts::
+
+    $ hatch run sem-release
+
+2. Publish artifacts to PyPI::
 
     $ hatch publish
 
 .. _README: ../README.rst
 .. _Hatch 1.6+: https://hatch.pypa.io/latest/
-.. _python-semantic-release: https://python-semantic-release.readthedocs.io/en/latest/#
+.. _python-semantic-release: https://python-semantic-release.readthedocs.io/en/latest/
 .. _GitHub Actions: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
-.. _Configuring push to Github: https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic-github
+.. _Configuring push to Github: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
