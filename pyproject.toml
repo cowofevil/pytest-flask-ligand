@@ -1,16 +1,182 @@
 [build-system]
-requires = ["setuptools ~= 63.4", "wheel ~= 0.37", "pbr ~= 5.9"]
-build-backend = "pbr.build"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pytest-flask-ligand"
+dynamic = ["version"]
+readme = "README.rst"
+license = "GPL-3.0"
+requires-python = ">= 3.10"
+dependencies = [
+    'flask<4',
+    'pytest>=7.3',
+    'python-dateutil==2.8.2',
+    'click~=8.1.0',
+]
+authors = [
+    { name = "Ryan Gard", email = "ryan@gardiancapitol.com" },
+]
+keywords = [
+    "test",
+    "unittest",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Framework :: Pytest",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Changelog = "https://github.com/cowofevil/pytest-flask-ligand/blob/main/CHANGELOG.md"
+Source = "https://github.com/cowofevil/pytest-flask-ligand"
+Tracker = "https://github.com/cowofevil/pytest-flask-ligand/issues"
+
+[tool.hatch.version]
+path = "pytest_flask_ligand/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "pytest_flask_ligand/**/*.py",
+]
+
+[project.entry-points.pytest11]
+flask_ligand = "pytest_flask_ligand"
+
+[dependency-groups]
+pre-commit = [
+    "pre-commit==4.6.0",
+    "pyproject-pre-commit==0.6.1"
+]
+black = [
+    "black==26.3.1",
+    "flake8-pyproject==1.2.4",
+    "flake8-bugbear==25.11.29",
+    "isort==8.0.1"
+]
+mypy = [
+    "mypy==1.20.2",
+    "types-python-dateutil==2.9.0.20260508"
+]
+test= [
+    "pytest-mock==3.15.1",
+    "tox==4.53.1",
+    "coverage[toml]~=7.2",
+    "pytest-cov==7.1.0",
+    "Pygments==2.20.0"
+]
+dev = [
+    "ipython~=8.13",
+    "python-semantic-release==10.5.3",
+    {include-group = "pre-commit"},
+    {include-group = "black"},
+    {include-group = "mypy"},
+    {include-group = "test"},
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests",]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = ["310", "311", "312", "313", "314"]
+
+[tool.hatch.envs.hatch-static-analysis.scripts]
+format-check = [
+  "black --check --diff {args:.}",
+  "isort --check-only --diff {args:.}",
+]
+format-fix = [
+  "isort {args:.}",
+  "black {args:.}",
+]
+lint-check = [
+    "flake8 {args:.}",
+    "mypy"
+]
+lint-fix = "lint-check"
+
+[tool.hatch.envs.default.extra-scripts]
+setup-pre-commit = "pre-commit install"
+clean-all = [
+    "pip3 cache purge",
+    "rm -fr .tox/",
+	"rm -f .coverage",
+	"rm -f coverage.xml",
+	"rm -fr htmlcov/",
+	"rm -fr .pytest_cache/",
+    "rm -fr .ruff_cache/",
+    "rm -fr .mypy_cache/",
+    "find . -name '*.pyc' -exec rm -f {{}} +",
+    "find . -name '*.pyo' -exec rm -f {{}} +",
+	"find . -name '*~' -exec rm -f {{}} +",
+	"find . -name '__pycache__' -exec rm -fr {{}} +",
+    "rm -fr build/",
+	"rm -fr dist/",
+	"rm -fr .eggs/",
+    "find . -name '*.egg-info' -exec rm -fr {{}} +",
+	"find . -name '*.egg' -exec rm -fr {{}} +"
+]
+run-pre-commit = [
+    "type pre-commit >/dev/null 2>&1 || ( echo >&2 'pre-commit not setup!'; exit 1; )",
+    "git diff --quiet || (echo 'Git staging is dirty!'; exit 1)",
+    "pre-commit run --all-files"
+]
+test-tox = "tox"
+test-tox-fast = "tox -p"
+coverage-term = [
+    "coverage run --source pytest_flask_ligand -m pytest",
+    'coverage report -m'
+]
+coverage-xml = [
+    "coverage-term",
+    "coverage xml"
+]
+install = [
+    "clean",
+    "uv pip install '.'"
+]
+install-edit = "uv pip install -e '.'"
+wipe-venv = "uv pip freeze --exclude-editable | xargs uv pip uninstall"
+develop =[
+    "install-edit",
+    "uv pip install --group dev"
+]
+reset-venv = [
+    "wipe-venv",
+    "develop"
+]
+
+[tool.hatch.envs.default]
+post-install-commands = [
+    "develop",
+]
+
+[tool.flake8]
+ignore = "E203,E501,E704,W503,D100,D102,D103,D104,D105,D106,D401"
+max-line-length = 120
 
 [tool.black]
 line-length = 120
-target-version = ["py310"]
 
 [tool.coverage.run]
-omit = ["tests/*", "setup.py"]
+omit = ["tests/*"]
 
 [tool.mypy]
-python_version = "3.10"
+files = ["pytest_flask_ligand/**/*.py", "tests/**/*.py"]
+install_types = true
+non_interactive = true
 check_untyped_defs = true
 disallow_any_generics = true
 disallow_incomplete_defs = true
@@ -33,3 +199,21 @@ version_pattern = "setup.cfg:version = {version}"
 version_variable = "pytest_flask_ligand/__init__.py:__version__"
 commit_parser = "emoji"
 use_textual_changelog_sections = true
+
+[tool.tox]
+skipsdist = true
+skip_missing_interpreters = true
+env_list = [
+    "py310",
+    "py311",
+    "py312",
+    "py313",
+    "py314"
+]
+
+[tool.tox.env_run_base]
+deps = ['-e .']
+dependency_groups = ["test"]
+commands = [
+    ["pytest"]
+]

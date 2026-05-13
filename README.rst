@@ -15,33 +15,36 @@ Prerequisites
 =============
 
 - Python 3.10+
-- virtualenvwrapper_
-
-Getting Help with Make Tasks
-============================
-
-Execute the following command to get a full list of ``make`` targets::
-
-    $ make help
+- `Hatch 1.6+`_
 
 Setup Python Development Environment
 ====================================
 
-1. Create a Python virtual environment::
+1. Navigate to your local git clone of this repository and create a Hatch 'virtualenv' environment for development::
 
-    $ mkvirtualenv -p py310 pytest-flask-ligand
+    $ hatch env create
 
-2. Setup develop environment::
+2. Verify development environment is working by running tests::
 
-    $ make develop-venv
+    $ hatch test
 
 3. Setup git pre-commit hooks::
 
-    $ make setup-pre-commit
+    $ hatch run setup-pre-commit
 
-4. Verify that environment is ready for development::
+4. Prime 'tox' for fast testing::
 
-    $ make test-all
+    $ hatch run test-tox
+
+5. Run tests super fast against all supported Python versions::
+
+    $ hatch run test-tox-fast
+
+6. Enable the Hatch 'virtualenv' development environment::
+
+    $ hatch shell
+
+7. Have fun hacking!
 
 Contributing
 ------------
@@ -53,17 +56,24 @@ Release Process
 
 See `release_process.rst`_ for information on the release process for the ``pytest-flask-ligand`` project.
 
+Getting Help with Custom Hatch Scripts
+======================================
+
+Execute the following command to get a full list of available custom Hatch scripts::
+
+    $ hatch env show
+
 Python Black IDE Integration
 ----------------------------
 
-This repo utilizes `Python Black`_ for automatic code formatting using the ``make format`` task. However, this is not
+This repo utilizes `Python Black`_ for automatic code formatting using the ``hatch fmt`` script. However, this is not
 very convenient to use on a regular basis and instead it is recommended to integrate Python Black into your IDE
 workflow. Checkout these `editor integration`_ guides for integrating `Python Black`_ with popular IDEs and text
 editors.
 
 .. _CONTRIBUTING.rst: CONTRIBUTING.rst
 .. _release_process.rst: docs/release_process.rst
-.. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.io/en/latest/
+.. _Hatch 1.6+: https://hatch.pypa.io/latest/
 .. _Python Black: https://black.readthedocs.io/en/stable/
 .. _editor integration: https://black.readthedocs.io/en/stable/integrations/editors.html
 
