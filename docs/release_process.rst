@@ -14,33 +14,8 @@ Prerequisites
 -------------
 
 - Python 3.10+
-- virtualenvwrapper_
-
-Getting Help with Make Tasks
-============================
-
-Execute the following command to get a full list of ``make`` targets::
-
-    $ make help
-
-Setup Python Development Environment
-====================================
-
-1. Create a Python virtual environment::
-
-    $ mkvirtualenv -p py310 pytest-flask-ligand
-
-2. Setup develop environment::
-
-    $ make develop-venv
-
-3. Setup git pre-commit hooks::
-
-    $ make setup-pre-commit
-
-4. Verify that environment is ready for development::
-
-    $ make test-all
+- `Hatch 1.6+`_
+- Hatch Development Environment (See README_ for instructions)
 
 Configuring Environment Variables
 ---------------------------------
@@ -68,11 +43,12 @@ The following environment variables are necessary for creating a full production
 Publish the Release
 -------------------
 
-Simply execute the following ``make`` target::
+Simply execute the following Hatch script::
 
-    $ make publish
+    $ hatch publish
 
-.. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.io/en/latest/
+.. _README: ../README.rst
+.. _Hatch 1.6+: https://hatch.pypa.io/latest/
 .. _python-semantic-release: https://python-semantic-release.readthedocs.io/en/latest/#
 .. _GitHub Actions: https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions
 .. _Configuring push to Github: https://python-semantic-release.readthedocs.io/en/latest/automatic-releases/index.html#automatic-github

@@ -26,7 +26,7 @@ class TestFlaskLigandTestHelpers(object):
             """)
 
         # run all tests with pytest
-        result = pytester.runpytest("-ppytest_flask_ligand")
+        result = pytester.runpytest("-pflask_ligand")
 
         # check that all tests passed
         result.assert_outcomes(passed=1)

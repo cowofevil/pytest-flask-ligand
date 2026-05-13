@@ -7,20 +7,11 @@ repos:
     -   id: detect-private-key
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
--   repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 26.3.1
+-   repo: https://github.com/rcmdnk/pyproject-pre-commit
+    rev: v0.6.0
     hooks:
     -   id: black
--   repo: https://github.com/PyCQA/flake8
-    rev: 7.3.0
-    hooks:
+    -   id: isort
     -   id: flake8
--   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.20.2
-    hooks:
     -   id: mypy
-        additional_dependencies: ["types-setuptools ~= 63.4", "types-python-dateutil ~= 2.8"]
--   repo: https://github.com/rstcheck/rstcheck
-    rev: v6.2.5
-    hooks:
-    -   id: rstcheck
+    -   id: validate-pyproject

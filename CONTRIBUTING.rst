@@ -13,39 +13,14 @@ Get Started!
 ------------
 
 Ready to contribute? Here's how to set up ``pytest-flask-ligand`` for local development using the handy built-in
-``make`` tasks.
+Hatch scripts.
 
 Prerequisites
 -------------
 
 - Python 3.10+
-- virtualenvwrapper_
-
-Getting Help with Make Tasks
-============================
-
-Execute the following command to get a full list of ``make`` targets::
-
-    $ make help
-
-Setup Python Development Environment
-====================================
-
-1. Create a Python virtual environment::
-
-    $ mkvirtualenv -p py310 pytest-flask-ligand
-
-2. Setup develop environment::
-
-    $ make develop-venv
-
-3. Setup git pre-commit hooks::
-
-    $ make setup-pre-commit
-
-4. Verify that environment is ready for development::
-
-    $ make test-all
+- `Hatch 1.6+`_
+- Hatch Development Environment (See README_ for instructions)
 
 Setup Fork & Local Feature Branch
 ---------------------------------
@@ -58,11 +33,7 @@ Once a fork has been created, follow these steps to make a local clone and creat
 
     $ git clone git@github.com:your_name_here/pytest-flask-ligand.git
 
-2. Setup develop environment::
-
-    $ cd pytest-flask-ligand/
-    $ make develop-venv # OR 'make develop' if you're not using virtualenvwrapper
-
+2. Setup a development environment following the instructions outlined in the README_.
 3. Create a branch for local development::
 
     $ git checkout -b name-of-your-bugfix-or-feature
@@ -77,9 +48,9 @@ Run All the Tests
 Before creating a commit it is essential that the changes be tested first. Also, make sure to write appropriate tests
 for the change you'll be proposing in the pull request!
 
-Simply execute the following ``make`` target to run tests against all supported Python versions::
+Simply execute the following Hatch script to run tests against all supported Python versions::
 
-    $ make test-all
+    $ hatch run test-tox-fast
 
 Commit Message Formatting
 -------------------------
@@ -138,7 +109,8 @@ Before you submit a pull request, check that it meets these guidelines:
 3. Check GitHub Actions to make sure that all tests pass for all supported Python versions before requesting a PR
    review.
 
-.. _virtualenvwrapper: https://virtualenvwrapper.readthedocs.io/en/latest/
+.. _README: ../README.rst
+.. _Hatch 1.6+: https://hatch.pypa.io/latest/
 .. _Github forking workflow: https://docs.github.com/en/get-started/quickstart/github-flow
 .. _fork this repo: https://docs.github.com/en/get-started/quickstart/fork-a-repo
 .. _python-semantic-release: https://python-semantic-release.readthedocs.io/en/latest/#
