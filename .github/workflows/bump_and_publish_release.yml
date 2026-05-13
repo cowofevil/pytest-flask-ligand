@@ -18,6 +18,7 @@ jobs:
 
     permissions:
       contents: write
+      id-token: write
 
     steps:
       # Note: We checkout the repository at the branch that triggered the workflow.
@@ -41,6 +42,12 @@ jobs:
         uses: python-semantic-release/python-semantic-release@v10.5.3
         with:
           build: false
+          changelog: true
+          commit: true
+          push: true
+          tag: true
+          vcs_release: true
+          verbose: 1
           github_token: ${{ secrets.GITHUB_TOKEN }}
           git_committer_name: "github-actions"
           git_committer_email: "actions@users.noreply.github.com"

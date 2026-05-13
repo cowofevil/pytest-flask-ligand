@@ -1,7 +1,7 @@
 Changelog
 =========
 
-<!--next-version-placeholder-->
+<!-- version list -->
 
 ## v0.1.14 (2023-04-25)
 ### Fix
