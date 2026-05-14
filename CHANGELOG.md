@@ -3,6 +3,14 @@ Changelog
 
 <!-- version list -->
 
+## v0.3.0 (2026-05-14)
+
+### :sparkles:
+
+- :sparkles: I Made it Worse
+  ([`f394875`](https://github.com/cowofevil/pytest-flask-ligand/commit/f394875663a7b706a233c784e807401023a9997e))
+
+
 ## v0.1.14 (2023-04-25)
 ### Fix
 * :arrow_up: Update black requirement from ~=23.1 to ~=23.3 ([`988b13f`](https://github.com/cowofevil/pytest-flask-ligand/commit/988b13fa38de51777b2b7d1445f7a1ecf70099d9))
