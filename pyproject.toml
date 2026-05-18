@@ -68,7 +68,7 @@ black = [
 ]
 mypy = [
     "mypy==1.20.2",
-    "types-python-dateutil==2.9.0.20260508"
+    "types-python-dateutil==2.9.0.20260518"
 ]
 test= [
     "pytest-mock==3.15.1",
