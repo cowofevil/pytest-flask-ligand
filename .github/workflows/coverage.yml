@@ -31,7 +31,7 @@ jobs:
       - name: Generate Coverage Report
         run: hatch run coverage-xml
       - name: Upload Report to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
           fail_ci_if_error: true
           files: ./coverage.xml
