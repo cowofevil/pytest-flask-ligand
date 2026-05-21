@@ -33,6 +33,9 @@ classifiers = [
     "Programming Language :: Python :: 3 :: Only",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Software Development :: Libraries",
     "Topic :: Software Development :: Testing",
     "Topic :: Utilities",
@@ -132,6 +135,9 @@ max-line-length = 120
 [tool.black]
 line-length = 120
 
+[tool.isort]
+profile = "black"
+
 [tool.coverage.run]
 omit = ["tests/*"]
 
@@ -216,7 +222,7 @@ post-install-commands = [
 
 [tool.hatch.envs.hatch-test.scripts]
 run = [
-    "coverage run -m pytest{env:HATCH_TEST_ARGS:} {args}",
+    "coverage run -m pytest {env:HATCH_TEST_ARGS} {args}",
     "cov-report"
 ]
 run-cov = "run"
