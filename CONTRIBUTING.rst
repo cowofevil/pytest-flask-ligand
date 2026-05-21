@@ -42,7 +42,7 @@ for the change you'll be proposing in the pull request!
 
 Simply execute the following Hatch script to run tests against all supported Python versions::
 
-    $ hatch run test-tox-fast
+    $ hatch run test-tox
 
 Commit Message Formatting
 -------------------------
