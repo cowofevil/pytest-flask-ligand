@@ -73,7 +73,7 @@ mypy = [
     "types-python-dateutil==2.9.0.20260518"
 ]
 test= [
-    "pytest-mock==3.15.1",
+    "pytest-mock==3.16.0",
     "tox==4.60.1",
     "tox-uv==1.36.1",
     "coverage[toml]==7.15.0",
@@ -219,7 +219,7 @@ post-install-commands = [
 # This is an intentional duplicate of 'test' dependencies in order to fix a bug in hatch
 # KEEP THIS IN SYNC WITH TEST DEPENDENCIES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 dependencies = [
-    "pytest-mock==3.15.1",
+    "pytest-mock==3.16.0",
     "tox==4.56.1",
     "tox-uv==1.35.2",
     "coverage[toml]==7.15.0",
